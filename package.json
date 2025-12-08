@@ -1,0 +1,27 @@
+{
+  "name": "moodul2",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+ "scripts": {
+  "dev": "concurrently \"npm run watch:html\" \"vite\"",
+  "watch:html": "node build-nunjucks.mjs --watch",
+  "build:html": "node build-nunjucks.mjs",
+  "build": "npm run build:html && vite build",
+  "preview": "vite preview"
+}
+
+,
+  "dependencies": {
+    "chokidar": "^3.5.3",
+    "daisyui": "^5.5.8",
+    "nunjucks": "^3.2.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.22",
+    "concurrently": "^9.2.1",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.18",
+    "vite": "^7.2.4"
+  }
+}

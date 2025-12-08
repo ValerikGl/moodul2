@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpectraX Esports</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body class="bg-black text-white font-orbitron">
+
+
+    <nav class="sticky top-0 z-50 w-full bg-black text-white border-b border-neutral-800 font-orbitron">
+  <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
+
+
+    <a href="/" class="text-3xl font-extrabold tracking-widest">
+      SPECTRA<span class="text-purple-400">X</span>
+    </a>
+
+
+    <ul class="hidden md:flex items-center space-x-5 text-sm font-semibold tracking-wide">
+      <li><a href="/index.html" class="nav-link">Home</a></li>
+      <li class="separator">|</li>
+      <li><a href="/team.html" class="nav-link">Team</a></li>
+      <li class="separator">|</li>
+      <li><a href="/games.html" class="nav-link">Games</a></li>
+      <li class="separator">|</li>
+      <li><a href="/shop.html" class="nav-link">Shop</a></li>
+      <li class="separator">|</li>
+      <li><a href="/contact.html" class="nav-link">Contact</a></li>
+    </ul>
+
+
+    <div class="hidden md:flex items-center space-x-3">
+
+      <button class="icon-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z" />
+        </svg>
+      </button>
+
+
+      <button class="icon-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 9m5-9v9m4-9v9m4-9l2 9" />
+        </svg>
+      </button>
+    </div>
+
+
+    <button class="md:hidden p-2 rounded bg-purple-600" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none"
+           viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+  </div>
+
+
+  <div id="mobile-menu" class="hidden md:hidden bg-black border-t border-neutral-800 px-6 pb-4 space-y-3">
+
+    <a href="/index.html" class="mobile-link">Home</a>
+    <a href="/team.html" class="mobile-link">Team</a>
+    <a href="/games.html" class="mobile-link">Games</a>
+    <a href="/shop.html" class="mobile-link">Shop</a>
+    <a href="/contact.html" class="mobile-link">Contact</a>
+
+  </div>
+</nav>
+
+<style>
+  .nav-link {
+    @apply hover:text-purple-300 transition border-b-2 border-transparent hover:border-purple-300 pb-1;
+  }
+  .separator {
+    @apply text-neutral-600;
+  }
+  .icon-btn {
+    @apply p-2 bg-purple-600 hover:bg-purple-500 rounded-md transition;
+  }
+  .mobile-link {
+    @apply block text-white font-semibold tracking-wide py-1 hover:text-purple-400 transition;
+  }
+</style>
+
+
+ 
+    <main class="w-full min-h-screen">
+        
+
+<section class="relative w-full flex flex-col items-center justify-center text-center py-20">
+
+
+    <div class="relative z-10">
+        <h1 class="text-5xl md:text-7xl font-bold tracking-wide">
+            SPECTRA<span class="text-purple-500">X</span> ESPORTS
+        </h1>
+
+        <p class="mt-4 text-lg text-gray-300 font-light">
+            Illuminate the Game.
+        </p>
+    </div>
+
+
+    <div class="relative z-10 mt-10">
+        <img src="/public/team-hero.png" alt="Esports Team"
+             class="max-w-4xl w-full object-contain">
+    </div>
+
+ 
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[10%] z-0">
+        <div class="w-[650px] h-[650px] rounded-full blur-[180px] opacity-60"
+             style="background: #00E5FF;">
+        </div>
+    </div>
+
+</section>
+
+
+
+
+    </main>
+
+
+    <footer class="footer footer-center p-4 bg-black border-t border-neutral-800 text-neutral-500">
+        <aside>
+            <p>© 2024 SpectraX — Esport Team</p>
+        </aside>
+    </footer>
+
+</body>
+</html>

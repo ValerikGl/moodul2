@@ -1,0 +1,35 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+<section class="relative w-full flex flex-col items-center justify-center text-center py-20">
+
+
+    <div class="relative z-10">
+        <h1 class="text-5xl md:text-7xl font-bold tracking-wide">
+            SPECTRA<span class="text-purple-500">X</span> ESPORTS
+        </h1>
+
+        <p class="mt-4 text-lg text-gray-300 font-light">
+            Illuminate the Game.
+        </p>
+    </div>
+
+
+    <div class="relative z-10 mt-10">
+        <img src="/public/team-hero.png" alt="Esports Team"
+             class="max-w-4xl w-full object-contain">
+    </div>
+
+ 
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[10%] z-0">
+        <div class="w-[650px] h-[650px] rounded-full blur-[180px] opacity-60"
+             style="background: #00E5FF;">
+        </div>
+    </div>
+
+</section>
+
+
+
+{% endblock %}
