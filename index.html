@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300;400;500;700&display=swap" />
 
     <link rel="stylesheet" href="/src/style.css">
 </head>
@@ -19,12 +21,12 @@
     <nav class="sticky top-0 z-50 w-full bg-black text-white border-b border-neutral-800 font-orbitron">
   <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
 
-
+    <!-- LOGO -->
     <a href="/" class="text-3xl font-extrabold tracking-widest">
       SPECTRA<span class="text-purple-400">X</span>
     </a>
 
-
+    <!-- NAV LINKS -->
     <ul class="hidden md:flex items-center space-x-5 text-sm font-semibold tracking-wide">
       <li><a href="/index.html" class="nav-link">Home</a></li>
       <li class="separator">|</li>
@@ -37,39 +39,37 @@
       <li><a href="/contact.html" class="nav-link">Contact</a></li>
     </ul>
 
-
+    <!-- ICON BUTTONS -->
     <div class="hidden md:flex items-center space-x-3">
 
-      <button class="icon-btn">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none"
-             viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z" />
-        </svg>
+      <!-- Search -->
+      <button class="icon-btn flex items-center justify-center">
+        <span class="material-symbols-outlined text-white text-[22px]">
+          search
+        </span>
       </button>
 
-
-      <button class="icon-btn">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none"
-             viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 9m5-9v9m4-9v9m4-9l2 9" />
-        </svg>
+      <!-- Account -->
+      <button class="icon-btn flex items-center justify-center">
+        <span class="material-symbols-outlined text-white text-[22px]">
+          account_circle
+        </span>
       </button>
+
     </div>
 
+    <!-- MOBILE MENU BUTTON -->
+    <button class="md:hidden p-2 rounded bg-purple-600"
+            onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
 
-    <button class="md:hidden p-2 rounded bg-purple-600" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none"
-           viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
+      <span class="material-symbols-outlined text-white text-[28px]">
+        menu
+      </span>
     </button>
 
   </div>
 
-
+  <!-- MOBILE MENU -->
   <div id="mobile-menu" class="hidden md:hidden bg-black border-t border-neutral-800 px-6 pb-4 space-y-3">
 
     <a href="/index.html" class="mobile-link">Home</a>
@@ -89,10 +89,23 @@
     @apply text-neutral-600;
   }
   .icon-btn {
-    @apply p-2 bg-purple-600 hover:bg-purple-500 rounded-md transition;
+    @apply p-2 bg-purple-600 hover:bg-purple-500 rounded-md transition flex items-center justify-center;
   }
   .mobile-link {
     @apply block text-white font-semibold tracking-wide py-1 hover:text-purple-400 transition;
+  }
+
+  /* Google Icons Proper Settings */
+  .material-symbols-outlined {
+    font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 </style>
 
@@ -101,8 +114,8 @@
     <main class="w-full min-h-screen">
         
 
-<section class="relative w-full flex flex-col items-center justify-center text-center py-20">
-
+<!-- HERO SECTION -->
+<section class="relative w-full flex flex-col items-center justify-center text-center min-h-[75vh] pt-16 pb-10">
 
     <div class="relative z-10">
         <h1 class="text-5xl md:text-7xl font-bold tracking-wide">
@@ -114,32 +127,177 @@
         </p>
     </div>
 
+    <!-- HERO IMAGE + DARK GRADIENT OVERLAY -->
+    <div class="relative z-10 mt-6 w-full flex justify-center">
 
-    <div class="relative z-10 mt-10">
+        <!-- Hero Image -->
         <img src="/public/team-hero.png" alt="Esports Team"
-             class="max-w-4xl w-full object-contain">
+             class="max-w-4xl w-[100%] mx-auto object-contain relative z-10">
+
+        <!-- Gradient Overlay -->
+        <div class="absolute bottom-0 left-0 w-full h-40
+                    bg-gradient-to-b from-transparent to-black opacity-100
+                    z-20 pointer-events-none"></div>
     </div>
 
- 
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[10%] z-0">
-        <div class="w-[650px] h-[650px] rounded-full blur-[180px] opacity-60"
-             style="background: #00E5FF;">
+</section>
+
+
+<!-- SECTION TRANSITION -->
+<div class="w-full h-24 bg-gradient-to-b from-transparent to-black"></div>
+
+
+<section class="py-20 text-center max-w-7xl mx-auto">
+
+    <h2 class="text-3xl md:text-4xl font-bold mb-14 tracking-wide">
+        Meet the Spectra<span class="text-purple-400">X</span> Squad
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 px-6">
+
+        <!-- CARD 1 -->
+        <div class="group relative overflow-hidden rounded-xl 
+                    border border-neutral-800 bg-neutral-900 
+                    hover:-translate-y-2 transition-all duration-300
+                    hover:shadow-[0_0_25px_#7c3aed70] cursor-pointer">
+            <img src="/public/cards/Playercard1.png" 
+                 class="w-full h-full object-cover" alt="Player 1">
         </div>
+
+        <!-- CARD 2 -->
+        <div class="group relative overflow-hidden rounded-xl 
+                    border border-neutral-800 bg-neutral-900 
+                    hover:-translate-y-2 transition-all duration-300
+                    hover:shadow-[0_0_25px_#7c3aed70] cursor-pointer">
+            <img src="/public/cards/Playercard2.png" 
+                 class="w-full h-full object-cover" alt="Player 2">
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="group relative overflow-hidden rounded-xl 
+                    border border-neutral-800 bg-neutral-900 
+                    hover:-translate-y-2 transition-all duration-300
+                    hover:shadow-[0_0_25px_#7c3aed70] cursor-pointer">
+            <img src="/public/cards/Playercard3.png" 
+                 class="w-full h-full object-cover" alt="Player 3">
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="group relative overflow-hidden rounded-xl 
+                    border border-neutral-800 bg-neutral-900 
+                    hover:-translate-y-2 transition-all duration-300
+                    hover:shadow-[0_0_25px_#7c3aed70] cursor-pointer">
+            <img src="/public/cards/Playercard4.png" 
+                 class="w-full h-full object-cover" alt="Player 4">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- GAMES WE COMPETE IN -->
+<section class="py-24 text-center bg-black">
+
+    <h2 class="text-3xl md:text-4xl font-bold mb-16 tracking-wide">
+        Games We Compete In
+    </h2>
+
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 px-6">
+
+        <!-- CS2 -->
+        <div class="flex justify-center items-center">
+            <img src="/public/games/Counter-Strike_2_logo.png" 
+                 alt="Counter-Strike 2"
+                 class="w-56 opacity-90 hover:opacity-100 transition duration-300 hover:scale-105">
+        </div>
+
+        <!-- VALORANT -->
+        <div class="flex justify-center items-center">
+            <img src="/public/games/Valorant_logo.png" 
+                 alt="Valorant"
+                 class="w-56 opacity-90 hover:opacity-100 transition duration-300 hover:scale-105">
+        </div>
+
+        <!-- APEX -->
+        <div class="flex justify-center items-center">
+            <img src="/public/games/Apex_Legends_logo.png" 
+                 alt="Apex Legends"
+                 class="w-56 opacity-90 hover:opacity-100 transition duration-300 hover:scale-105">
+        </div>
+
     </div>
 
 </section>
 
 
 
+</section>
+
 
     </main>
 
+    <footer class="bg-black border-t border-neutral-800 mt-16">
+    <div class="max-w-7xl mx-auto px-6 py-16
+                flex flex-col md:flex-row
+                justify-between items-start gap-14">
 
-    <footer class="footer footer-center p-4 bg-black border-t border-neutral-800 text-neutral-500">
-        <aside>
-            <p>© 2024 SpectraX — Esport Team</p>
-        </aside>
-    </footer>
+        <!-- LEFT: LOGO + TEXT -->
+        <div class="max-w-sm">
+            <div class="text-2xl font-extrabold tracking-widest font-orbitron">
+                SPECTRA<span class="text-purple-400">X</span>
+            </div>
+
+            <p class="text-sm text-gray-400 mt-4 leading-relaxed">
+                  © 2025 SpectraX Esports. All rights reserved.
+            </p>
+        </div>
+
+        <!-- RIGHT: ICONS + NAV -->
+        <div class="flex flex-col items-end gap-6">
+
+          <!-- ICONS -->
+<div class="flex gap-3">
+    <!-- Instagram -->
+    <a href="#" class="social-icon" aria-label="Instagram">
+        <span class="material-symbols-outlined">photo_camera</span>
+    </a>
+
+    <!-- Facebook -->
+    <a href="#" class="social-icon" aria-label="Facebook">
+        <span class="material-symbols-outlined">groups</span>
+    </a>
+</div>
+
+
+            <!-- NAV (ROW, NOT COLUMN) -->
+            <nav class="flex gap-6 text-sm font-semibold tracking-widest">
+                <a href="/index.html" class="footer-link">HOME</a>
+                <a href="/team.html" class="footer-link">TEAM</a>
+                <a href="/shop.html" class="footer-link">SHOP</a>
+                <a href="/games.html" class="footer-link">GAMES</a>
+                <a href="/contact.html" class="footer-link text-purple-400">CONTACT</a>
+            </nav>
+
+        </div>
+    </div>
+
+
+</footer>
+
+<style>
+    .footer-link {
+        @apply text-gray-300 hover:text-purple-400 transition;
+    }
+
+    .social-icon {
+        @apply w-9 h-9 flex items-center justify-center rounded-md
+               bg-neutral-900 text-gray-300
+               hover:text-white hover:bg-purple-600
+               transition;
+    }
+</style>
+
+
 
 </body>
 </html>

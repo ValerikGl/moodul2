@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300;400;500;700&display=swap" />
 
     <link rel="stylesheet" href="/src/style.css">
 </head>
@@ -23,12 +25,8 @@
         {% block content %}{% endblock %}
     </main>
 
+    {% include "components/footer.njk" %}
 
-    <footer class="footer footer-center p-4 bg-black border-t border-neutral-800 text-neutral-500">
-        <aside>
-            <p>© 2024 SpectraX — Esport Team</p>
-        </aside>
-    </footer>
 
 </body>
 </html>

@@ -2,8 +2,8 @@
 
 {% block content %}
 
-<section class="relative w-full flex flex-col items-center justify-center text-center py-20">
-
+<!-- HERO SECTION -->
+<section class="relative w-full flex flex-col items-center justify-center text-center min-h-[75vh] pt-16 pb-10">
 
     <div class="relative z-10">
         <h1 class="text-5xl md:text-7xl font-bold tracking-wide">
@@ -15,21 +15,110 @@
         </p>
     </div>
 
+    <!-- HERO IMAGE + DARK GRADIENT OVERLAY -->
+    <div class="relative z-10 mt-6 w-full flex justify-center">
 
-    <div class="relative z-10 mt-10">
+        <!-- Hero Image -->
         <img src="/public/team-hero.png" alt="Esports Team"
-             class="max-w-4xl w-full object-contain">
-    </div>
+             class="max-w-4xl w-[100%] mx-auto object-contain relative z-10">
 
- 
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[10%] z-0">
-        <div class="w-[650px] h-[650px] rounded-full blur-[180px] opacity-60"
-             style="background: #00E5FF;">
-        </div>
+        <!-- Gradient Overlay -->
+        <div class="absolute bottom-0 left-0 w-full h-40
+                    bg-gradient-to-b from-transparent to-black opacity-100
+                    z-20 pointer-events-none"></div>
     </div>
 
 </section>
 
 
+<!-- SECTION TRANSITION -->
+<div class="w-full h-24 bg-gradient-to-b from-transparent to-black"></div>
+
+
+<section class="py-20 text-center max-w-7xl mx-auto">
+
+    <h2 class="text-3xl md:text-4xl font-bold mb-14 tracking-wide">
+        Meet the Spectra<span class="text-purple-400">X</span> Squad
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 px-6">
+
+        <!-- CARD 1 -->
+        <div class="group relative overflow-hidden rounded-xl 
+                    border border-neutral-800 bg-neutral-900 
+                    hover:-translate-y-2 transition-all duration-300
+                    hover:shadow-[0_0_25px_#7c3aed70] cursor-pointer">
+            <img src="/public/cards/Playercard1.png" 
+                 class="w-full h-full object-cover" alt="Player 1">
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="group relative overflow-hidden rounded-xl 
+                    border border-neutral-800 bg-neutral-900 
+                    hover:-translate-y-2 transition-all duration-300
+                    hover:shadow-[0_0_25px_#7c3aed70] cursor-pointer">
+            <img src="/public/cards/Playercard2.png" 
+                 class="w-full h-full object-cover" alt="Player 2">
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="group relative overflow-hidden rounded-xl 
+                    border border-neutral-800 bg-neutral-900 
+                    hover:-translate-y-2 transition-all duration-300
+                    hover:shadow-[0_0_25px_#7c3aed70] cursor-pointer">
+            <img src="/public/cards/Playercard3.png" 
+                 class="w-full h-full object-cover" alt="Player 3">
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="group relative overflow-hidden rounded-xl 
+                    border border-neutral-800 bg-neutral-900 
+                    hover:-translate-y-2 transition-all duration-300
+                    hover:shadow-[0_0_25px_#7c3aed70] cursor-pointer">
+            <img src="/public/cards/Playercard4.png" 
+                 class="w-full h-full object-cover" alt="Player 4">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- GAMES WE COMPETE IN -->
+<section class="py-24 text-center bg-black">
+
+    <h2 class="text-3xl md:text-4xl font-bold mb-16 tracking-wide">
+        Games We Compete In
+    </h2>
+
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 px-6">
+
+        <!-- CS2 -->
+        <div class="flex justify-center items-center">
+            <img src="/public/games/Counter-Strike_2_logo.png" 
+                 alt="Counter-Strike 2"
+                 class="w-56 opacity-90 hover:opacity-100 transition duration-300 hover:scale-105">
+        </div>
+
+        <!-- VALORANT -->
+        <div class="flex justify-center items-center">
+            <img src="/public/games/Valorant_logo.png" 
+                 alt="Valorant"
+                 class="w-56 opacity-90 hover:opacity-100 transition duration-300 hover:scale-105">
+        </div>
+
+        <!-- APEX -->
+        <div class="flex justify-center items-center">
+            <img src="/public/games/Apex_Legends_logo.png" 
+                 alt="Apex Legends"
+                 class="w-56 opacity-90 hover:opacity-100 transition duration-300 hover:scale-105">
+        </div>
+
+    </div>
+
+</section>
+
+
+
+</section>
 
 {% endblock %}

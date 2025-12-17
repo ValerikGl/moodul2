@@ -2,6 +2,7 @@ import nunjucks from "nunjucks";
 import fs from "fs";
 import path from "path";
 import chokidar from "chokidar";
+import products from "./src/data/products.js";
 
 const srcDir = "./pages";
 
@@ -17,14 +18,17 @@ function compile(outputDir) {
   files.forEach(file => {
     if (file === "layout.njk") return;
 
-    const html = nunjucks.render(file);
+
+    const html = nunjucks.render(file, {
+      products
+    });
+
     const output = path.join(outputDir, file.replace(".njk", ".html"));
     fs.writeFileSync(output, html);
 
     console.log("Compiled:", output);
   });
 }
-
 
 if (process.argv.includes("--watch")) {
   compile(".");
@@ -33,6 +37,5 @@ if (process.argv.includes("--watch")) {
     compile(".");
   });
 } else {
-
   compile("./dist");
 }
