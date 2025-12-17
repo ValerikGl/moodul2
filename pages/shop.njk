@@ -51,45 +51,32 @@
     
 
     {% for product in products %}
-    <div class="bg-white rounded-2xl p-5 text-black group">
-
-      <!-- IMAGE -->
-      <div class="overflow-hidden rounded-xl mb-5">
-        <img
-          src="{{ product.image }}"
-          alt="{{ product.title }}"
-          class="w-full h-96 object-cover group-hover:scale-105 transition"
-        />
-      </div>
-
-      <!-- TITLE + ADD BUTTON -->
-      <div class="flex items-start justify-between mb-2">
-        <h2 class="font-bold tracking-wide leading-tight">
-          {{ product.title | upper }}
-        </h2>
-
-        <button
-  class="w-9 h-9 ml-3 rounded-full
-         bg-purple-600 text-white
-         flex items-center justify-center
-         text-xl leading-none
-         hover:scale-110 transition
-         hover:shadow-[0_0_20px_rgba(168,85,247,0.8)]
-         add-to-cart"
-  data-id="{{ product.id }}"
+<a
+  href="/product.html?slug={{ product.slug }}"
+  class="bg-white rounded-2xl p-5 text-black group block"
 >
-  +
-</button>
 
-      </div>
+  <!-- IMAGE -->
+  <div class="overflow-hidden rounded-xl mb-5">
+    <img
+      src="{{ product.image }}"
+      alt="{{ product.title }}"
+      class="w-full h-96 object-cover group-hover:scale-105 transition"
+    />
+  </div>
 
-      <!-- PRICE -->
-      <p class="text-purple-600 font-semibold">
-        ${{ product.price }}
-      </p>
+  <!-- TITLE -->
+  <h2 class="font-bold tracking-wide leading-tight mb-2">
+    {{ product.title | upper }}
+  </h2>
 
-    </div>
-    {% endfor %}
+  <!-- PRICE -->
+  <p class="text-purple-600 font-semibold">
+    ${{ product.price }}
+  </p>
+
+</a>
+{% endfor %}
 
   </div>
 
