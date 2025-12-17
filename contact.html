@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300;400;500;700&display=swap" />
+
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body class="bg-black text-white font-orbitron">
+
+
+    <nav class="sticky top-0 z-50 w-full bg-black text-white border-b border-neutral-800 font-orbitron">
+  <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
+
+    <!-- LOGO -->
+    <a href="/" class="text-3xl font-extrabold tracking-widest">
+      SPECTRA<span class="text-purple-400">X</span>
+    </a>
+
+    <!-- NAV LINKS -->
+    <ul class="hidden md:flex items-center space-x-5 text-sm font-semibold tracking-wide">
+      <li><a href="/index.html" class="nav-link">Home</a></li>
+      <li class="separator">|</li>
+      <li><a href="/team.html" class="nav-link">Team</a></li>
+      <li class="separator">|</li>
+      <li><a href="/games.html" class="nav-link">Games</a></li>
+      <li class="separator">|</li>
+      <li><a href="/shop.html" class="nav-link">Shop</a></li>
+      <li class="separator">|</li>
+      <li><a href="/contact.html" class="nav-link">Contact</a></li>
+    </ul>
+
+    <!-- ICON BUTTONS -->
+    <div class="hidden md:flex items-center space-x-3">
+
+      <!-- Search -->
+      <button class="icon-btn flex items-center justify-center">
+        <span class="material-symbols-outlined text-white text-[22px]">
+          search
+        </span>
+      </button>
+
+      <!-- Account -->
+      <button class="icon-btn flex items-center justify-center">
+        <span class="material-symbols-outlined text-white text-[22px]">
+          account_circle
+        </span>
+      </button>
+
+    </div>
+
+    <!-- MOBILE MENU BUTTON -->
+    <button class="md:hidden p-2 rounded bg-purple-600"
+            onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+
+      <span class="material-symbols-outlined text-white text-[28px]">
+        menu
+      </span>
+    </button>
+
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu" class="hidden md:hidden bg-black border-t border-neutral-800 px-6 pb-4 space-y-3">
+
+    <a href="/index.html" class="mobile-link">Home</a>
+    <a href="/team.html" class="mobile-link">Team</a>
+    <a href="/games.html" class="mobile-link">Games</a>
+    <a href="/shop.html" class="mobile-link">Shop</a>
+    <a href="/contact.html" class="mobile-link">Contact</a>
+
+  </div>
+</nav>
+
+<style>
+  .nav-link {
+    @apply hover:text-purple-300 transition border-b-2 border-transparent hover:border-purple-300 pb-1;
+  }
+  .separator {
+    @apply text-neutral-600;
+  }
+  .icon-btn {
+    @apply p-2 bg-purple-600 hover:bg-purple-500 rounded-md transition flex items-center justify-center;
+  }
+  .mobile-link {
+    @apply block text-white font-semibold tracking-wide py-1 hover:text-purple-400 transition;
+  }
+
+  /* Google Icons Proper Settings */
+  .material-symbols-outlined {
+    font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
+
+
+ 
+    <main class="w-full min-h-screen">
+        
+<section class="max-w-7xl mx-auto px-6 py-24 grid grid-cols-1 lg:grid-cols-2 gap-20">
+
+  <!-- LEFT INFO -->
+  <div>
+    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-10">
+      Let's discuss<br />
+      on something <span class="text-purple-500">cool</span><br />
+      together
+    </h1>
+
+    <div class="space-y-6 text-gray-300">
+
+      <div class="flex items-center gap-4">
+        <span class="material-symbols-outlined text-purple-500">mail</span>
+        <span>SpectraX@gmail.com</span>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <span class="material-symbols-outlined text-purple-500">call</span>
+        <span>+123 456 789</span>
+      </div>
+
+   
+      <div class="flex items-center gap-4">
+        <span class="material-symbols-outlined text-purple-500">location_on</span>
+        <span>123 Street 456 House</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FORM -->
+  <form
+    class="space-y-10"
+    onsubmit="handleSubmit(event)"
+  >
+
+    <!-- NAME -->
+    <div>
+      <label class="block text-sm text-gray-400 mb-2">Your name</label>
+     <input
+  type="text"
+  required
+  class="w-full bg-transparent border-b border-white
+         text-white
+         focus:outline-none
+         focus:border-purple-500
+         focus:text-purple-400
+         transition py-2"
+/>
+
+    </div>
+
+    <!-- EMAIL -->
+    <div>
+      <label class="block text-sm text-gray-400 mb-2">Your email</label>
+      <input
+  type="email"
+  required
+  class="w-full bg-transparent border-b border-white
+         text-white
+         focus:outline-none
+         focus:border-purple-500
+         focus:text-purple-400
+         transition py-2"
+/>
+
+    </div>
+
+    <!-- MESSAGE -->
+    <div>
+      <label class="block text-sm text-gray-400 mb-2">Your message</label>
+      <textarea
+  rows="3"
+  required
+  class="w-full bg-transparent border-b border-white
+         text-white
+         focus:outline-none
+         focus:border-purple-500
+         focus:text-purple-400
+         transition py-2 resize-none"
+></textarea>
+    </div>
+
+    <!-- BUTTON -->
+    <div class="pt-6">
+      <button
+        type="submit"
+        class="flex items-center gap-3 bg-purple-500 hover:bg-purple-600 transition px-8 py-3 rounded-xl ml-auto"
+      >
+        <span class="material-symbols-outlined">send</span>
+        Send Message
+      </button>
+    </div>
+
+  </form>
+
+</section>
+
+
+
+    </main>
+
+    <footer class="bg-black border-t border-neutral-800 mt-16">
+    <div class="max-w-7xl mx-auto px-6 py-16
+                flex flex-col md:flex-row
+                justify-between items-start gap-14">
+
+        <!-- LEFT: LOGO + TEXT -->
+        <div class="max-w-sm">
+            <div class="text-2xl font-extrabold tracking-widest font-orbitron">
+                SPECTRA<span class="text-purple-400">X</span>
+            </div>
+
+            <p class="text-sm text-gray-400 mt-4 leading-relaxed">
+                  © 2025 SpectraX Esports. All rights reserved.
+            </p>
+        </div>
+
+        <!-- RIGHT: ICONS + NAV -->
+        <div class="flex flex-col items-end gap-6">
+
+          <!-- ICONS -->
+<div class="flex gap-3">
+    <!-- Instagram -->
+    <a href="#" class="social-icon" aria-label="Instagram">
+        <span class="material-symbols-outlined">photo_camera</span>
+    </a>
+
+    <!-- Facebook -->
+    <a href="#" class="social-icon" aria-label="Facebook">
+        <span class="material-symbols-outlined">groups</span>
+    </a>
+</div>
+
+
+            <!-- NAV (ROW, NOT COLUMN) -->
+            <nav class="flex gap-6 text-sm font-semibold tracking-widest">
+                <a href="/index.html" class="footer-link">HOME</a>
+                <a href="/team.html" class="footer-link">TEAM</a>
+                <a href="/shop.html" class="footer-link">SHOP</a>
+                <a href="/games.html" class="footer-link">GAMES</a>
+                <a href="/contact.html" class="footer-link text-purple-400">CONTACT</a>
+            </nav>
+
+        </div>
+    </div>
+
+
+</footer>
+
+<style>
+    .footer-link {
+        @apply text-gray-300 hover:text-purple-400 transition;
+    }
+
+    .social-icon {
+        @apply w-9 h-9 flex items-center justify-center rounded-md
+               bg-neutral-900 text-gray-300
+               hover:text-white hover:bg-purple-600
+               transition;
+    }
+</style>
+
+
+
+</body>
+</html>
